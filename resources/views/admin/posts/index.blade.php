@@ -8,7 +8,7 @@
                 <th>Id</th>
                 <th>Slug</th>
                 <th>Title</th>
-                <th colspan="3">Actions</th>
+                <th class="actions">Actions</th>
             </tr>
         </thead>
         <tbody>
@@ -17,13 +17,11 @@
                     <td>{{ $post->id }}</td>
                     <td>{{ $post->slug }}</td>
                     <td>{{ $post->title }}</td>
-                    <td>
+                    <td class="actions">
                         <a href="{{ route('admin.posts.show', ['post' => $post]) }}" class="btn btn-primary">View</a>
-                    </td>
-                    <td>
+
                         <a href="{{ route('admin.posts.edit', ['post' => $post]) }}" class="btn btn-warning">Edit</a>
-                    </td>
-                    <td>
+
                         <button class="btn btn-danger js-delete">Delete</button>
                     </td>
                 </tr>

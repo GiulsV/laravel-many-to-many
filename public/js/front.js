@@ -40133,8 +40133,8 @@ var app = new Vue({
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Users\valen\Documents\Esercizi Boolean\LARAVEL\laravel-one-to-many\resources\js\front.js */"./resources/js/front.js");
-module.exports = __webpack_require__(/*! C:\Users\valen\Documents\Esercizi Boolean\LARAVEL\laravel-one-to-many\resources\sass\back.scss */"./resources/sass/back.scss");
+__webpack_require__(/*! C:\Users\valen\Documents\Esercizi Boolean\LARAVEL\laravel-many-to-many\resources\js\front.js */"./resources/js/front.js");
+module.exports = __webpack_require__(/*! C:\Users\valen\Documents\Esercizi Boolean\LARAVEL\laravel-many-to-many\resources\sass\back.scss */"./resources/sass/back.scss");
 
 
 /***/ })
