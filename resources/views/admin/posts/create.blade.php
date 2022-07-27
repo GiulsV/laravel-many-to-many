@@ -1,6 +1,10 @@
 @extends('admin.layouts.base')
 
 @section('mainContent')
+    @dump($errors->all())
+    @dump(Auth::user()->name)
+    {{-- @dd($errors->get('tags.*')) --}}
+
     <h1>Create new post</h1>
     <form action="{{ route('admin.posts.store') }}" method="post" novalidate>
         @csrf
@@ -55,6 +59,7 @@
             <legend>Tags</legend>
             @foreach ($tags as $tag)
                 <div class="form-check">
+                    {{-- ricordarsi di aggiungere [] al name per avere un array come valore di ritorno --}}
                     <input
                         class="form-check-input"
                         type="checkbox"
@@ -67,11 +72,14 @@
                 </div>
             @endforeach
 
-            @error('tags')
-                <div class="invalid-feedback">
-                    {{ $message }}
-                </div>
-            @enderror
+            @foreach ($errors->get('tags.*') as $messages)
+                {{-- @dd($message) --}}
+                @foreach ($messages as $message)
+                    <div class="invalid-feedback d-block">
+                        {{ $message }}
+                    </div>
+                @endforeach
+            @endforeach
         </fieldset>
 
         <div class="mb-3">

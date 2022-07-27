@@ -116,7 +116,7 @@ class RegisterController extends Controller
                         ? new JsonResponse([], 201)
                         : redirect($this->redirectPath());
         } else {
-            return redirect()->route('register')->with('db-error', 'Errore nel DB. Riprovare'); // TODO: add normal redirect
+            return redirect()->route('register')->with('db-error', 'Errore nel DB. Riprovare');
         }
     }
 }
